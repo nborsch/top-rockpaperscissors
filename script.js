@@ -21,11 +21,20 @@ function playGame() {
 
         if (humanSelection === computerSelection) {
             console.log(`It's a tie! Nobody wins.`)
-        } else if ((humanSelection === 'paper' && computerSelection === 'rock') || (humanSelection === 'scissors' && computerSelection === 'paper') || (humanSelection === 'rock' && computerSelection === 'scissors')) {
-            console.log(`You win! ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)} beats ${computerSelection}.`)
+
+        } else if ((humanSelection === 'paper' && computerSelection === 'rock') ||
+            (humanSelection === 'scissors' && computerSelection === 'paper') ||
+            (humanSelection === 'rock' && computerSelection === 'scissors')) {
+
+            console.log(`You win! ${humanSelection.charAt(0).toUpperCase() +
+                humanSelection.slice(1)} beats ${computerSelection}.`)
+
             humanScore++
+
         } else {
-            console.log(`You lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${humanSelection}.`)
+            console.log(`You lose! ${computerSelection.charAt(0).toUpperCase() +
+                computerSelection.slice(1)} beats ${humanSelection}.`)
+
             computerScore++
         }
     }
