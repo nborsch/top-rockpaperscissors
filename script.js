@@ -14,14 +14,17 @@ function playGame() {
     let computerScore = 0
     let humanScore = 0
 
+    /*Game logic*/
     function playRound() {
 
         const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
 
+        /* Game is a tie */
         if (humanSelection === computerSelection) {
             console.log(`It's a tie! Nobody wins.`)
 
+            /* Human wins */
         } else if ((humanSelection === 'paper' && computerSelection === 'rock') ||
             (humanSelection === 'scissors' && computerSelection === 'paper') ||
             (humanSelection === 'rock' && computerSelection === 'scissors')) {
@@ -31,6 +34,7 @@ function playGame() {
 
             humanScore++
 
+            /* Human loses */
         } else {
             console.log(`You lose! ${computerSelection.charAt(0).toUpperCase() +
                 computerSelection.slice(1)} beats ${humanSelection}.`)
@@ -47,5 +51,6 @@ function playGame() {
 
     const winner = computerScore === humanScore ? `No winner, it's a tie!` : computerScore > humanScore ? `The computer wins!` : `You're the final winner!`
 
+    /* Show total game rounds result*/
     console.log(`${winner} Computer ${computerScore} You ${humanScore}`)
 }
