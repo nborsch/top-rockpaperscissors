@@ -43,11 +43,9 @@ function playGame() {
         }
     }
 
-    playRound()
-    playRound()
-    playRound()
-    playRound()
-    playRound()
+    for (let i = 5; i > 0; i--) {
+        playRound()
+    }
 
     const winner = computerScore === humanScore ? `No winner, it's a tie!` : computerScore > humanScore ? `The computer wins!` : `You're the final winner!`
 
