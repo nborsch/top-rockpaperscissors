@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors - The Odin Project - Coded by Nadia Borsch</title>
 </head>
-
 <body>
-
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <h2>Winner: <span class="winner"></span></h2>
+        <p>Current round: <span class="current-round">0</span></p> 
+        <p>Computer choice: <span class="computer-choice"></span></p>
+        <p>Current round winner: <span class="current-round-winner"></span></p>
+        <div class="buttons">
+            <p>Make your pick</p>
+            <button id="rock">rock</button>
+            <button id="paper">paper</button>
+            <button id="scissors">scissors</button>
+        </div><!-- .buttons -->
+    </div> <!-- .container -->
+<script src="./script.js"></script>
 </body>
-<script src="./script.js">
-</script>
-
 </html>

@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    --dark: #0c1618;
+    --light: #004643;
+    --white: #faf4d3
+}
+
+body {
+    display: grid;
+    place-content: center;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 1em;
+
+    font-family: "Poiret One", sans-serif;
+    background: var(--dark);
+    color: var(--white);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 600px;
+    padding: 2em;
+    
+    background: var(--light);
+    border-radius: 10px;
+    border-bottom: var(--dark);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: bolder;
+    padding: 0.6em;
+    border-bottom: 2px solid var(--dark);
+}
+
+h2 {
+    font-size: 18px;
+    margin: 2em 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.winner {
+    border: 1px solid var(--white);
+    padding: 0.625em;
+}
+
+.current-round-winner,
+.current-round,
+.computer-choice {
+    font-weight: bold;
+}
+
+div[class='buttons'] {
+    margin-top: 20px;
+    padding-bottom: 0.6em;
+}
+
+button {
+    border: 0;
+    padding: 0.625em 0.9375em;
+    width: 100px;
+
+    background-color: var(--dark);
+    color: var(--white);
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.buttons p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 425px) {
+    button {
+        width: 100%;
+        margin: 0.3125em 0;
+    }
+}
